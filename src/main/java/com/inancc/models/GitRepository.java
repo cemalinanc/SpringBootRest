@@ -15,6 +15,9 @@ public class GitRepository implements IRepository{
     private String description;
     private Date createdAt;
 
+    // using JSonGetter and JSonSetter instead of JSonPropery
+    // because from git api we are getting as stargazers_count and we want to
+    // return from our service as stars
     @JsonGetter("stars")
     public int getStars() {
         return stars;
